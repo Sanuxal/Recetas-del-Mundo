@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas del Mundo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e0f7fa; /* Color de fondo */
+            color: #333; /* Color del texto */
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Arial Black', sans-serif;
+            color: #00796b;
+        }
+        h2 {
+            font-family: 'Georgia', serif;
+            color: #004d40;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .tab.active {
+            background-color: #004d40;
+        }
+        .recipes {
+            display: none;
+        }
+        .recipes.active {
+            display: block;
+        }
+        .recipe {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #00796b;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recetas del Mundo</h1>
+    <div class="tabs">
+        <div class="tab active" data-tab="carne">Carne</div>
+        <div class="tab" data-tab="pescado">Pescado</div>
+        <div class="tab" data-tab="vegetales">Vegetales</div>
+    </div>
+
+    <div id="carne" class="recipes active">
+        <div class="recipe">
+            <h2>1. Bistec a la Parrilla</h2>
+            <p><strong>Ingredientes:</strong> Bistec, sal, pimienta, aceite de oliva.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Precalienta la parrilla a alta temperatura.</li>
+                <li>Unta el bistec con aceite de oliva y sazona con sal y pimienta.</li>
+                <li>Coloca el bistec en la parrilla y cocina durante 4-5 minutos por cada lado para un término medio.</li>
+                <li>Retira el bistec de la parrilla y deja reposar durante 5 minutos antes de servir.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>2. Pollo al Curry</h2>
+            <p><strong>Ingredientes:</strong> Pechugas de pollo, cebolla, ajo, jengibre, curry en polvo, leche de coco, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Corta las pechugas de pollo en trozos pequeños.</li>
+                <li>Sofríe la cebolla, el ajo y el jengibre en una sartén con un poco de aceite.</li>
+                <li>Añade el pollo y cocina hasta que esté dorado.</li>
+                <li>Agrega el curry en polvo y mezcla bien.</li>
+                <li>Vierte la leche de coco y cocina a fuego lento durante 20 minutos.</li>
+                <li>Sazona con sal y pimienta al gusto antes de servir.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>3. Costillas de Cerdo BBQ</h2>
+            <p><strong>Ingredientes:</strong> Costillas de cerdo, salsa BBQ, sal, pimienta, ajo en polvo.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Precalienta el horno a 150°C.</li>
+                <li>Sazona las costillas con sal, pimienta y ajo en polvo.</li>
+                <li>Coloca las costillas en una bandeja para hornear y cúbrelas con papel aluminio.</li>
+                <li>Hornea durante 2 horas.</li>
+                <li>Retira el papel aluminio, unta las costillas con salsa BBQ y hornea por 30 minutos más.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>4. Albóndigas en Salsa de Tomate</h2>
+            <p><strong>Ingredientes:</strong> Carne molida, pan rallado, huevo, ajo, cebolla, salsa de tomate, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Mezcla la carne molida con pan rallado, huevo, ajo picado, sal y pimienta.</li>
+                <li>Forma albóndigas y fríelas en una sartén hasta que estén doradas.</li>
+                <li>En una olla, sofríe la cebolla y añade la salsa de tomate.</li>
+                <li>Agrega las albóndigas a la salsa y cocina a fuego lento durante 20 minutos.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>5. Estofado de Ternera</h2>
+            <p><strong>Ingredientes:</strong> Ternera, zanahorias, patatas, cebolla, ajo, caldo de carne, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Corta la ternera en trozos y sazona con sal y pimienta.</li>
+                <li>Sofríe la ternera en una olla hasta que esté dorada.</li>
+                <li>Añade la cebolla y el ajo picados y cocina por unos minutos.</li>
+                <li>Agrega las zanahorias y las patatas cortadas en trozos.</li>
+                <li>Vierte el caldo de carne y cocina a fuego lento durante 1 hora o hasta que la carne esté tierna.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="pescado" class="recipes">
+        <div class="recipe">
+            <h2>1. Salmón al Horno</h2>
+            <p><strong>Ingredientes:</strong> Filetes de salmón, limón, ajo, eneldo, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Precalienta el horno a 200°C.</li>
+                <li>Coloca los filetes de salmón en una bandeja para hornear.</li>
+                <li>Exprime el jugo de limón sobre el salmón y añade ajo picado y eneldo.</li>
+                <li>Sazona con sal y pimienta al gusto.</li>
+                <li>Hornea durante 12-15 minutos o hasta que el salmón esté cocido.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>2. Bacalao a la Vizcaína</h2>
+            <p><strong>Ingredientes:</strong> Bacalao, pimientos rojos, cebolla, ajo, tomate, aceite de oliva, sal.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Desala el bacalao dejándolo en agua durante 24 horas, cambiando el agua varias veces.</li>
+                <li>Sofríe la cebolla, el ajo y los pimientos en una sartén con aceite de oliva.</li>
+                <li>Añade el tomate picado y cocina a fuego lento durante 20 minutos.</li>
+                <li>Agrega el bacalao y cocina por 10 minutos más.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>3. Merluza a la Gallega</h2>
+            <p><strong>Ingredientes:</strong> Filetes de merluza, patatas, cebolla, pimentón, aceite de oliva, sal.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Hierve las patatas y la cebolla en agua con sal hasta que estén tiernas.</li>
+                <li>En una sartén, calienta el aceite de oliva y añade el pimentón.</li>
+                <li>Coloca los filetes de merluza en la sartén y cocina por 5-7 minutos.</li>
+                <li>Sirve con las patatas y la cebolla.</li>
+            </ol>
+        </div>
+       <div class="recipe">
+            <h2>4. Atún a la Plancha</h2>
+            <p><strong>Ingredientes:</strong> Filetes de atún, limón, ajo, perejil, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Calienta una plancha o sartén a fuego medio-alto.</li>
+                <li>Unta los filetes de atún con jugo de limón, ajo picado y perejil.</li>
+                <li>Sazona con sal y pimienta al gusto.</li>
+                <li>Cocina los filetes de atún durante 2-3 minutos por cada lado.</li>
+                <li>Sirve inmediatamente.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>5. Gambas al Ajillo</h2>
+            <p><strong>Ingredientes:</strong> Gambas, ajo, guindilla, aceite de oliva, sal, perejil.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Calienta el aceite de oliva en una sartén a fuego medio.</li>
+                <li>Añade el ajo picado y la guindilla y sofríe hasta que el ajo esté dorado.</li>
+                <li>Agrega las gambas y cocina hasta que estén rosadas.</li>
+                <li>Sazona con sal y perejil picado antes de servir.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="vegetales" class="recipes">
+        <div class="recipe">
+            <h2>1. Ensalada de Quinoa</h2>
+            <p><strong>Ingredientes:</strong> Quinoa, tomate, pepino, cebolla roja, perejil, limón, aceite de oliva, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Cocina la quinoa según las instrucciones del paquete.</li>
+                <li>Deja enfriar y mezcla con tomate, pepino, cebolla roja y perejil picados.</li>
+                <li>Aliña con jugo de limón, aceite de oliva, sal y pimienta al gusto.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>2. Ratatouille</h2>
+            <p><strong>Ingredientes:</strong> Berenjena, calabacín, pimientos, tomate, cebolla, ajo, aceite de oliva, hierbas provenzales, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Corta todas las verduras en rodajas finas.</li>
+                <li>Sofríe la cebolla y el ajo en una sartén con aceite de oliva.</li>
+                <li>Añade las verduras y cocina a fuego lento durante 30-40 minutos.</li>
+                <li>Sazona con hierbas provenzales, sal y pimienta al gusto.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>3. Sopa de Tomate</h2>
+            <p><strong>Ingredientes:</strong> Tomates, cebolla, ajo, caldo de verduras, albahaca, aceite de oliva, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Sofríe la cebolla y el ajo en una olla con aceite de oliva.</li>
+                <li>Añade los tomates picados y cocina durante 10 minutos.</li>
+                <li>Vierte el caldo de verduras y cocina a fuego lento durante 20 minutos.</li>
+                <li>Licúa la sopa y sazona con sal, pimienta y albahaca al gusto.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>4. Tacos de Verduras</h2>
+            <p><strong>Ingredientes:</strong> Tortillas, pimientos, cebolla, calabacín, champiñones, aguacate, cilantro, limón, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Sofríe los pimientos, la cebolla, el calabacín y los champiñones en una sartén con aceite de oliva.</li>
+                <li>Calienta las tortillas en una sartén o en el microondas.</li>
+                <li>Rellena las tortillas con las verduras sofritas.</li>
+                <li>Añade aguacate, cilantro picado y un poco de jugo de limón.</li>
+                <li>Sazona con sal y pimienta al gusto.</li>
+            </ol>
+        </div>
+        <div class="recipe">
+            <h2>5. Espinacas a la Crema</h2>
+            <p><strong>Ingredientes:</strong> Espinacas, nata para cocinar, ajo, cebolla, nuez moscada, sal, pimienta.</p>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Sofríe la cebolla y el ajo en una sartén con aceite de oliva.</li>
+                <li>Añade las espinacas y cocina hasta que estén tiernas.</li>
+                <li>Vierte la nata para cocinar y sazona con nuez moscada, sal y pimienta.</li>
+                <li>Cocina a fuego lento durante 10 minutos.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const recipes = document.querySelectorAll('.recipes');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                recipes.forEach(r => r.classList.remove('active'));
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
